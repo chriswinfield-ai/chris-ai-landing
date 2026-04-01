@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chris Winfield — AI for Entrepreneurs and Leaders</title>
+<meta name="description" content="Chris Winfield helps entrepreneurs and leaders make AI practical, profitable, and impossible to ignore.">
+<meta property="og:title" content="Chris Winfield — AI for Entrepreneurs and Leaders">
+<meta property="og:description" content="Practical AI strategy, speaking, and insights for entrepreneurs, founders, and modern brands.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f9fc;
+    --white: #ffffff;
+    --ink: #0f1720;
+    --charcoal: #26313b;
+    --mid: #5c6b78;
+    --light: #97a4af;
+    --border: #e5ebf0;
+    --accent: #0f1720;
+    --blue: #1f6feb;
+    --blue-light: #eaf2ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 0 40px; height: 72px; display: flex; justify-content: space-between; align-items: center; background: rgba(247,249,252,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Libre Baskerville', serif; font-size: 1rem; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a, .footer-links a { text-decoration: none; color: var(--mid); font-size: 0.9rem; }
+  .nav-cta, .btn-dark { background: var(--ink); color: var(--white); padding: 12px 22px; text-decoration: none; border-radius: 999px; font-size: 0.9rem; display: inline-block; }
+  .btn-border { border: 1px solid var(--border); color: var(--charcoal); padding: 12px 22px; text-decoration: none; border-radius: 999px; display: inline-block; }
+  section { scroll-margin-top: 88px; }
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1.2fr 0.8fr; padding-top: 72px; }
+  .hero-left { padding: 80px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-tag { font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); margin-bottom: 24px; display:flex; align-items:center; gap:12px; }
+  .tag-dot { width: 8px; height: 8px; background: var(--blue); border-radius: 50%; }
+  .hero-name { font-family: 'Libre Baskerville', serif; font-size: clamp(2.6rem, 5vw, 4.8rem); line-height: 1.05; margin-bottom: 22px; }
+  .hero-name em { font-style: italic; color: var(--mid); }
+  .hero-desc { max-width: 700px; font-size: 1.08rem; line-height: 1.8; color: var(--mid); margin-bottom: 28px; }
+  .hero-credentials { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+  .credential-row { display:flex; align-items:center; gap:10px; color: var(--charcoal); font-size: 0.95rem; }
+  .cred-icon { width: 28px; height: 28px; border-radius: 50%; background: var(--blue-light); display:flex; align-items:center; justify-content:center; color: var(--blue); font-size: 0.75rem; }
+  .hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+  .hero-right { border-left: 1px solid var(--border); background: var(--white); display:flex; flex-direction:column; }
+  .hero-portrait { min-height: 420px; display:flex; align-items:center; justify-content:center; background: linear-gradient(145deg, #dce6f3 0%, #b8c6d8 100%); padding: 40px; text-align:center; }
+  .hero-portrait-inner { max-width: 360px; }
+  .hero-portrait h3 { font-family:'Libre Baskerville', serif; font-size:1.5rem; margin-bottom:10px; }
+  .hero-portrait p { color: var(--charcoal); line-height:1.7; }
+  .hero-metrics { display:grid; grid-template-columns: 1fr 1fr; gap:1px; background: var(--border); }
+  .metric { background: var(--white); padding: 24px; }
+  .metric-val { font-family: 'Libre Baskerville', serif; font-size: 2rem; margin-bottom: 4px; }
+  .metric-label { color: var(--mid); font-size: 0.82rem; }
+  .section-wrap { max-width: 1180px; margin: 0 auto; padding: 80px 40px; }
+  .section-label { font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); margin-bottom: 12px; }
+  .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 3vw, 3rem); line-height: 1.15; margin-bottom: 16px; }
+  .section-title em { font-style: italic; color: var(--mid); }
+  .section-desc { max-width: 720px; color: var(--mid); line-height: 1.8; }
+  .logo-strip { display:flex; flex-wrap:wrap; gap:18px; margin-top: 34px; }
+  .logo-pill { padding: 10px 16px; background: var(--white); border: 1px solid var(--border); border-radius: 999px; color: var(--charcoal); font-size: 0.88rem; }
+  .expertise { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .expertise-grid, .talks-grid, .contact-grid { display:grid; gap: 20px; }
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); margin-top: 36px; }
+  .expertise-card { background: var(--bg); border: 1px solid var(--border); padding: 28px; }
+  .exp-num { font-family:'Libre Baskerville', serif; color: #c4d0db; font-size: 1.5rem; margin-bottom: 10px; }
+  .exp-title { font-weight: 600; margin-bottom: 8px; }
+  .exp-desc { color: var(--mid); line-height: 1.7; font-size: 0.92rem; }
+  .career { background: var(--bg); }
+  .timeline { display:flex; flex-direction:column; gap: 22px; margin-top: 34px; }
+  .timeline-item { display:grid; grid-template-columns: 140px 1fr; gap: 24px; padding-bottom: 22px; border-bottom:1px solid var(--border); }
+  .tl-year { color: var(--mid); font-size: 0.86rem; }
+  .tl-company { font-family:'Libre Baskerville', serif; font-size: 1.08rem; margin-bottom: 6px; }
+  .tl-role { color: var(--charcoal); font-size: 0.93rem; margin-bottom: 8px; }
+  .tl-desc { color: var(--mid); line-height: 1.7; }
+  .speaking { background: var(--ink); }
+  .speaking .section-label { color: rgba(255,255,255,0.55); }
+  .speaking .section-title, .speaking .section-desc { color: var(--white); }
+  .speaking .section-title em { color: rgba(255,255,255,0.55); }
+  .talks-grid { grid-template-columns: repeat(2, 1fr); margin-top: 34px; }
+  .talk-card { border: 1px solid rgba(255,255,255,0.12); padding: 26px; color: var(--white); }
+  .talk-event { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+  .talk-title { font-family:'Libre Baskerville', serif; font-size: 1.05rem; margin-bottom: 8px; }
+  .talk-org { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+  .contact { background: var(--bg); border-top:1px solid var(--border); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); margin-top: 34px; }
+  .contact-card { background: var(--white); border:1px solid var(--border); padding: 28px; }
+  .contact-card-title { font-family:'Libre Baskerville', serif; font-size: 1.1rem; margin-bottom: 8px; }
+  .contact-card-desc { color: var(--mid); line-height: 1.7; margin-bottom: 14px; }
+  .contact-card-link { color: var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); }
+  footer { display:flex; justify-content:space-between; gap:20px; align-items:center; padding: 32px 40px; background: var(--white); border-top:1px solid var(--border); }
+  .footer-name { font-family:'Libre Baskerville', serif; }
+  .footer-copy { color: var(--light); font-size: 0.84rem; }
+  .footer-links { display:flex; gap:20px; }
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-links, .nav-cta { display:none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { border-left: 0; border-top: 1px solid var(--border); }
+    .hero-left, .section-wrap { padding-left: 24px; padding-right: 24px; }
+    .expertise-grid, .talks-grid, .contact-grid { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 1fr; gap: 10px; }
+    footer { flex-direction: column; text-align:center; padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Chris Winfield</div>
+  <ul class="nav-links">
+    <li><a href="#expertise">AI Focus</a></li>
+    <li><a href="#career">Background</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Chris</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag"><span class="tag-dot"></span>AI · Media · Relationships · Entrepreneur</div>
+    <h1 class="hero-name">Chris Winfield helps entrepreneurs and leaders make AI <em>practical, profitable, and impossible to ignore.</em></h1>
+    <p class="hero-desc">Speaker, strategist, and entrepreneur helping founders, experts, and modern brands use AI to create leverage, sharpen visibility, build trust faster, and unlock real business opportunity.</p>
+    <div class="hero-credentials">
+      <div class="credential-row"><div class="cred-icon">AI</div>Founder and public voice helping businesses understand where AI creates real leverage</div>
+      <div class="credential-row"><div class="cred-icon">PR</div>Contributor for Inc. and host for Entrepreneur with features in top-tier media</div>
+      <div class="credential-row"><div class="cred-icon">→</div>Known for turning visibility, authority, and relationships into strategic advantage</div>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-dark">Book Chris to Speak</a>
+      <a href="#speaking" class="btn-border">View AI Topics</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-portrait">
+      <div class="hero-portrait-inner">
+        <h3>AI for entrepreneurs and leaders</h3>
+        <p>Not hype. Not theory. Clear, practical guidance on how to use AI for visibility, productivity, positioning, and growth.</p>
+      </div>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric"><div class="metric-val">200+</div><div class="metric-label">media outlets featuring Chris</div></div>
+      <div class="metric"><div class="metric-val">Inc.</div><div class="metric-label">contributor and entrepreneur media credibility</div></div>
+      <div class="metric"><div class="metric-val">AI</div><div class="metric-label">business-focused talks and insights</div></div>
+      <div class="metric"><div class="metric-val">Real</div><div class="metric-label">practical application over buzzwords</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-wrap">
+    <div class="section-label">Trusted Voice</div>
+    <h2 class="section-title">A trusted voice at the intersection of <em>AI, media, and business growth.</em></h2>
+    <p class="section-desc">Chris brings a rare mix of entrepreneurial experience, media credibility, and practical AI thinking — making complex shifts easier for business owners, founders, and teams to understand and act on.</p>
+    <div class="logo-strip">
+      <span class="logo-pill">Entrepreneur</span>
+      <span class="logo-pill">Inc.</span>
+      <span class="logo-pill">Business Insider</span>
+      <span class="logo-pill">TIME</span>
+      <span class="logo-pill">Wall Street Journal</span>
+      <span class="logo-pill">New York Times</span>
+      <span class="logo-pill">NBC</span>
+      <span class="logo-pill">ABC News</span>
+      <span class="logo-pill">Forbes</span>
+    </div>
+  </div>
+</section>
+
+<section class="expertise" id="expertise">
+  <div class="section-wrap">
+    <div class="section-label">AI Focus</div>
+    <h2 class="section-title">Where AI becomes <em>real business advantage.</em></h2>
+    <p class="section-desc">Chris helps leaders cut through noise and focus on the places AI actually moves the business forward.</p>
+    <div class="expertise-grid">
+      <div class="expertise-card"><div class="exp-num">01</div><div class="exp-title">AI Strategy</div><p class="exp-desc">Understand where AI creates real leverage in your business, brand, team, and workflow — and where it doesn’t.</p></div>
+      <div class="expertise-card"><div class="exp-num">02</div><div class="exp-title">AI for Visibility</div><p class="exp-desc">Use AI to sharpen messaging, accelerate content creation, and build brand authority without losing your voice.</p></div>
+      <div class="expertise-card"><div class="exp-num">03</div><div class="exp-title">AI for Productivity</div><p class="exp-desc">Streamline decision-making, execution, research, and daily operations so teams can move faster with less friction.</p></div>
+      <div class="expertise-card"><div class="exp-num">04</div><div class="exp-title">AI for Entrepreneurs</div><p class="exp-desc">Make smarter decisions about tools, workflows, positioning, and what modern business leaders need to understand now.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="career" id="career">
+  <div class="section-wrap">
+    <div class="section-label">Background</div>
+    <h2 class="section-title">Chris brings business, media, and relationship experience to the <em>AI conversation.</em></h2>
+    <div class="timeline">
+      <div class="timeline-item"><div class="tl-year">Now</div><div><div class="tl-company">AI Education, Speaking & Strategic Insight</div><div class="tl-role">Helping entrepreneurs and leaders make AI useful</div><p class="tl-desc">Chris focuses on practical AI application for visibility, authority, decision-making, and business leverage — translating complexity into clear action.</p></div></div>
+      <div class="timeline-item"><div class="tl-year">Media</div><div><div class="tl-company">Contributor & Host</div><div class="tl-role">Inc. and Entrepreneur</div><p class="tl-desc">Public-facing credibility built through writing, interviews, and business media, with a strong foundation in visibility and trusted authority.</p></div></div>
+      <div class="timeline-item"><div class="tl-year">Relationships</div><div><div class="tl-company">Super Connector Media / Unfair Advantage</div><div class="tl-role">Entrepreneur and relationship strategist</div><p class="tl-desc">Known for helping entrepreneurs use relationships, media, and positioning to open doors and create meaningful opportunities.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="speaking" id="speaking">
+  <div class="section-wrap">
+    <div class="section-label">Speaking</div>
+    <h2 class="section-title">AI talks that are <em>clear, practical, and actually useful.</em></h2>
+    <p class="section-desc">Chris speaks to entrepreneurs, founders, and modern teams who want less hype and more strategic clarity about what AI means for business right now.</p>
+    <div class="talks-grid">
+      <div class="talk-card"><div class="talk-event">Signature Talk</div><div class="talk-title">AI for Entrepreneurs: What Matters Now</div><div class="talk-org">The practical moves business owners should be making today</div></div>
+      <div class="talk-card"><div class="talk-event">Signature Talk</div><div class="talk-title">How to Use AI Without Losing Your Voice</div><div class="talk-org">AI for content, positioning, and visibility with authenticity intact</div></div>
+      <div class="talk-card"><div class="talk-event">Signature Talk</div><div class="talk-title">The Real Business Advantage of AI</div><div class="talk-org">How leaders create leverage, speed, and clarity with the right AI systems</div></div>
+      <div class="talk-card"><div class="talk-event">Signature Talk</div><div class="talk-title">AI, Visibility, and Authority in the Modern Market</div><div class="talk-org">Why the brands that use AI well will earn more trust and attention</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-wrap">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Speaking, media, partnerships, and <em>AI-focused opportunities.</em></h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-card-title">Speaking & Events</div>
+        <p class="contact-card-desc">For conferences, podcasts, panels, masterminds, and private events focused on AI, entrepreneurship, and business growth.</p>
+        <a class="contact-card-link" href="mailto:chris@superconnectormedia.com">chris@superconnectormedia.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-title">Media & Strategic Partnerships</div>
+        <p class="contact-card-desc">For interviews, media commentary, brand partnerships, and opportunities where Chris’s AI perspective can add value.</p>
+        <a class="contact-card-link" href="mailto:chris@superconnectormedia.com">chris@superconnectormedia.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Chris Winfield</div>
+  <div class="footer-copy">© 2026 Chris Winfield. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="#expertise">AI Focus</a>
+    <a href="#speaking">Speaking</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+</body>
+</html>
